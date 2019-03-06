@@ -135,8 +135,8 @@ class MainWindow:
 			socket = context.socket(zmq.SUB)
 			socket.setsockopt(zmq.LINGER, 100)
 			print("CONNECTED " + str(x))
-			#socket.connect("tcp://192.168.1.15"+str(x)+":9000")   # for lab network
-			socket.connect("tcp://127.0.0.1"+str(x)+":9000")       # for local webcam testing
+			socket.connect("tcp://192.168.1.15"+str(x)+":9000")   # for lab network
+			#socket.connect("tcp://127.0.0.1"+str(x)+":9000")       # for local webcam testing
 			socket.subscribe("")
 			self.sockets.append(socket)
 		
