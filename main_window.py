@@ -56,7 +56,7 @@ class MainWindow:
 	def VideoLoop(self):
 		cameraID = self.threadID
 		self.threadID = self.threadID + 1
-		print ("thread ready: " + str(cameraID) + 1)
+		print ("thread ready: " + str(cameraID + 1))
 		
 		while not self.stopEvent.is_set():
 			try:
@@ -116,7 +116,7 @@ class MainWindow:
 			image = image.resize((320,240))  
 
 			image = ImageTk.PhotoImage(image)
-			self.texts[cameraID].set("No message")
+			self.texts[cameraID].set("[Camera " + str(cameraID + 1)+ "]: No message")
 
 		elif (string[0].decode("utf-8")=="Command"):
 			cmd = AdditionalControl()
