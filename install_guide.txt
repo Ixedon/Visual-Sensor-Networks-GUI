@@ -1,0 +1,45 @@
+Guide to installing all the necessary libraries
+
+1. Install pip   #most systems already have it
+
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3 get-pip.py
+
+
+2. Create a virtualenv
+
+pip install virtualenv virtualenvwrapper   #if doesn't work try adding --user or using pip2
+
+echo -e "\n# virtualenv and virtualenvwrapper" >> ~/.bashrc
+echo "export WORKON_HOME=$HOME/.virtualenvs" >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+
+source ~/.bashrc              #optionally logout/log-in to load up changes
+
+mkvirtualenv vision -p python3
+
+workon vision    #use it to activate the virtualenv
+
+Opencv:
+pip install opencv-contrib-python
+
+Zeromq 17.1.2: 
+pip install pyzmq
+
+Protobuf:
+pip install protobuf
+
+imutils 0.5.2:
+pip install imutils
+
+PIL:
+pip install Pillow
+
+tkinter:
+apt-get install python3-tk
+
+
+More information on installing opencv with virtualenvs:
+https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/
+
+

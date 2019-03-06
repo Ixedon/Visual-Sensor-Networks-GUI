@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+// Demo message typ:
+message ImageInfo {
+	int32 cameraID = 1;  // Define the id of the camera.
+	bytes image =  2; // Define the image of the camera.
+	
+	// bounding box
+	int32 bbX = 3;
+	int32 bbY = 4;
+	int32 bbWidth = 5;
+	int32 bbHeight = 6; 
+
+	//tracking/detection confidence 
+	double conf = 7;
+
+}
+
+message AdditionalControl {
+	int32 cameraID = 1;  // Define the id of the camera.
+	string command =  2; // Define the image of the camera.
+
+}
+
+
