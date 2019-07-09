@@ -15,7 +15,6 @@ The Gui accepts input from both port 9000 and 8000
 - Image - Frame to be displayed - type: ImageInfo
 - Command - Text to be displayed below a stream - type: AdditionalControl
 - Prediction - Text that can be displayed on top of the interface (only one place, so it should be used only by one camera, preferably the leader) 
-- 
 
 
 
